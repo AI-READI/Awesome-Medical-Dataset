@@ -1,8 +1,8 @@
-# Dataset Name
+# AI-READI Dataset
 Flagship Dataset of Type 2 Diabetes from the AI-READI Project
 
 ## Dataset Information
-This dataset is created by the Artificial Intelligence Ready and Exploratory Atlas for Diabetes Insights (AI-READI) project as part of the NIH Bridge2AI program. The project seeks to create a flagship dataset to enable future generations of artificial intelligence/machine learning (AI/ML) research to provide critical insights into type 2 diabetes mellitus (T2DM), including salutogenic pathways to return to health. The current version of the dataset (version 2) released in November 2024 contains data from 1067 participants that was collected between July 19, 2023 and July 31, 2024. Data from multiple modalities are included, including 3D OCT, 3D OCTA, 2D fundus, and en face images. A full list is provided in the Data Standards section included in the Dataset Meta Information section. The data is accessible through a new data repository we are developing called FAIRhub (see the Source Information section). The data in this dataset contain no protected health information (PHI). Information related to the sex and race/ethnicity of the participants as well as medication used has also been removed. More details about the project is available in the project website and the dataset documentation listed below under Source Information.
+This dataset is created by the Artificial Intelligence Ready and Exploratory Atlas for Diabetes Insights (AI-READI) project as part of the NIH Bridge2AI program. The project seeks to create a flagship dataset to enable future generations of artificial intelligence/machine learning (AI/ML) research to provide critical insights into type 2 diabetes mellitus (T2DM), including salutogenic pathways to return to health. The current version of the dataset (version 2) released in November 2024 contains data from 1067 participants that was collected between July 19, 2023 and July 31, 2024. Data from multiple modalities are included, including 3D OCT, 3D OCTA, 2D fundus, and en face images. A full list is provided in the Data Standards section included in the [Dataset Meta Information](#dataset-meta-information). The data is accessible through a new data repository we are developing called [FAIRhub](https://fairhub.io/datasets/2). The data in this dataset contain no protected health information (PHI). Information related to the sex and race/ethnicity of the participants as well as medication used has also been removed. More details about the project is available in the project website and the dataset documentation listed below under Source Information.
 
 ## Dataset Meta Information
 
@@ -43,7 +43,39 @@ This dataset is created by the Artificial Intelligence Ready and Exploratory Atl
 | Heidelberg   | Spectralis                    | Macula, Optic Disc                        | Infrared Reflectance                                      | Yes      |
 
 
+
 ## Label Information Statistics
+
+The AI-READI dataset provides a rich set of labels suitable for a wide variety of machine learning tasks in medical imaging. One of the primary classification targets is **diabetes status**, categorized into:
+
+
+| Category | Number |
+|----------|--------|
+| No DM     | 364    |
+| Lifestyle | 242    |
+| Oral      | 331    |
+| Insulin   | 130    |
+
+
+- **No DM** : Participants who do not have Type 1 or Type 2 Diabetes
+- **Lifestyle**: Participants with pre-Type 2 Diabetes and those with Type 2 Diabetes whose blood sugar is controlled by lifestyle adjustments
+- **Oral**: Participants with Type 2 Diabetes whose blood sugar is controlled by oral or injectable medications other than insulin
+- **Insulin**: Participants with Type 2 Diabetes whose blood sugar is controlled by insulin
+
+In addition to these categorical labels, the dataset offers **a wide range of patient-level clinical measurements** that can be used as continuous or categorical targets for training. These include, but are not limited to:
+
+- **Age-related Macular Degeneration (AMD)**
+- **Glaucoma**
+- **Hemoglobin A1c (HgbA1c)**
+- **MoCA** (Montreal Cognitive Assessment)
+- and many more...
+
+To facilitate model development, the dataset comes with a [PyTorch-based dataloader](https://github.com/AI-READI/aireadi_loader/) that allows users to easily construct image–target pairs for tasks such as classification, regression, and segmentation.
+
+
+## Demographic Breakdown of Data Splits
+
+The AI-READI dataset comes with a **predetermined train/validation/test split** to support reproducible research and fair benchmarking. Below is the breakdown of the number of patients in each split by demographic categories such as sex, race, and diabetes status.
 
 |                         | Train         |           |       |         | Val          |           |       |         | Test         |           |       |         | Total        |           |       |         |
 | ----------------------- | ------------- | --------- | ----- | ------- | ------------ | --------- | ----- | ------- | ------------ | --------- | ----- | ------- | ------------ | --------- | ----- | ------- |
@@ -57,10 +89,7 @@ This dataset is created by the Artificial Intelligence Ready and Exploratory Atl
 | Total                   | 747           |           |       |         | 160          |           |       |         | 160          |           |       |         | 1067         |           |       |         |
 
 
-- No DM : Participants who do not have Type 1 or Type 2 Diabetes
-- Lifestyle: Participants with pre-Type 2 Diabetes and those with Type 2 Diabetes whose blood sugar is controlled by lifestyle adjustments
-- Oral: Participants with Type 2 Diabetes whose blood sugar is controlled by oral or injectable medications other than insulin
-- Insulin: Participants with Type 2 Diabetes whose blood sugar is controlled by insulin
+
 
 ## Visualization
 
