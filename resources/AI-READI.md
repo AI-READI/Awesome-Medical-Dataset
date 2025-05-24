@@ -51,9 +51,9 @@ The AI-READI dataset provides a rich set of labels suitable for a wide variety o
 
 | Category | Number |
 |----------|--------|
-| No DM     | 364    |
+| No DM     | 372    |
 | Lifestyle | 242    |
-| Oral      | 331    |
+| Oral      | 323    |
 | Insulin   | 130    |
 
 
@@ -84,7 +84,7 @@ The AI-READI dataset comes with a **predetermined train/validation/test split** 
 |                         | Male          | Female    |       |         | Male         | Female    |       |         | Male         | Female    |       |         | Male         | Female    |       |         |
 | Sex (count)             | 302           | 445       |       |         | 80           | 80        |       |         | 80           | 80        |       |         | 462          | 605       |       |         |
 |                         | No DM         | Lifestyle | Oral  | Insulin | No DM        | Lifestyle | Oral  | Insulin | No DM        | Lifestyle | Oral  | Insulin | No DM        | Lifestyle | Oral  | Insulin |
-| Diabetes status (count) | 292           | 162       | 235   | 58      | 40           | 40        | 47    | 33      | 40           | 40        | 41    | 39      | 364          | 242       | 331   | 130     |
+| Diabetes status (count) | 292           | 162       | 235   | 58      | 40           | 40        | 47    | 33      | 40           | 40        | 41    | 39      | 372          | 242       | 323   | 130     |
 | Mean age (years ± sd)   | 60.3  ± 11.13 |           |       |         | 60.2 ±  10.5 |           |       |         | 60.4 ±  11.0 |           |       |         | 60.3 ±  11.1 |           |       |         |
 | Total                   | 747           |           |       |         | 160          |           |       |         | 160          |           |       |         | 1067         |           |       |         |
 
